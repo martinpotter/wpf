@@ -17,10 +17,6 @@ variables:
     value: WINDOWSDESKTOP
   - name: PostBuildSign
     value: true
-  
-  - ${{ if and(ne(variables['System.TeamProject'], 'public'), notin(variables['Build.Reason'], 'PullRequest')) }}:
-    - group: DotNet-Wpf-SDLValidation-Params
-
 
 # This is set in the pipeline directly 
 # When set to false, CI tests will not be enabled in builds. 
@@ -37,12 +33,7 @@ trigger:
   branches:
     include: 
     - main
-    - release/3.*
-    - release/5.*
-    - release/6.*
-    - internal/release/5.*
-    - internal/release/6.*
-    - experimental/*
+    - stable
   paths:
     exclude:
     - Documentation/*
@@ -52,11 +43,7 @@ pr:
   branches:
     include:
     - main
-    - release/3.* 
-    - internal/release/3.*
-    - release/5.*
-    - release/6.*
-    - experimental/*
+    - stable
   paths:
     exclude:
     - Documentation/*
@@ -69,15 +56,8 @@ stages:
   - template: /eng/pipeline.yml
     parameters:
       enablePublishUsingPipelines: $(_PublishUsingPipelines)
-      ${{ if and(ne(variables['System.TeamProject'], 'public'), notin(variables['Build.Reason'], 'PullRequest')) }}:
-        # agent pool can't be read from a user-defined variable (Azure DevOps limitation)
-        pool:
-          name: NetCore1ESPool-Svc-Internal
-          demands: ImageOverride -equals build.windows.10.amd64.vs2019.pre
-        # runAsPublic is used in expressions, which can't read from user-defined variables
-        runAsPublic: false
 
-- ${{ if and(ne(variables['System.TeamProject'], 'public'), notin(variables['Build.Reason'], 'PullRequest')) }}:
+- ${{ if and(false, notin(variables['Build.Reason'], 'PullRequest')) }}:
   - template: eng\common\templates\post-build\post-build.yml
     parameters:
       publishingInfraVersion: 3

@@ -100,8 +100,7 @@ stages:
           demands: Cmd
         # If it's not devdiv, it's dnceng
         ${{ if ne(variables['System.TeamProject'], 'DevDiv') }}:
-          name: NetCore1ESPool-Internal
-          demands: ImageOverride -equals Build.Server.Amd64.VS2019
+          vmImage: windows-2022
 
       steps:
         - template: setup-maestro-vars.yml
@@ -137,8 +136,7 @@ stages:
           demands: Cmd
         # If it's not devdiv, it's dnceng
         ${{ if ne(variables['System.TeamProject'], 'DevDiv') }}:
-          name: NetCore1ESPool-Internal
-          demands: ImageOverride -equals Build.Server.Amd64.VS2019
+          vmImage: windows-2022
       steps:
         - template: setup-maestro-vars.yml
           parameters:
@@ -197,8 +195,7 @@ stages:
           demands: Cmd
         # If it's not devdiv, it's dnceng
         ${{ if ne(variables['System.TeamProject'], 'DevDiv') }}:
-          name: NetCore1ESPool-Internal
-          demands: ImageOverride -equals Build.Server.Amd64.VS2019
+          vmImage: windows-2022
       steps:
         - template: setup-maestro-vars.yml
           parameters:
@@ -227,14 +224,6 @@ stages:
               -SourcelinkCliVersion $(SourceLinkCLIVersion)
           continueOnError: true
 
-    - template: /eng/common/templates/job/execute-sdl.yml
-      parameters:
-        enable: ${{ parameters.SDLValidationParameters.enable }}
-        additionalParameters: ${{ parameters.SDLValidationParameters.params }}
-        continueOnError: ${{ parameters.SDLValidationParameters.continueOnError }}
-        artifactNames: ${{ parameters.SDLValidationParameters.artifactNames }}
-        downloadArtifacts: ${{ parameters.SDLValidationParameters.downloadArtifacts }}
-
 - stage: publish_using_darc
   ${{ if or(eq(parameters.enableNugetValidation, 'true'), eq(parameters.enableSigningValidation, 'true'), eq(parameters.enableSourceLinkValidation, 'true'), eq(parameters.SDLValidationParameters.enable, 'true')) }}:
     dependsOn: ${{ parameters.publishDependsOn }}
@@ -254,8 +243,7 @@ stages:
           demands: Cmd
         # If it's not devdiv, it's dnceng
         ${{ if ne(variables['System.TeamProject'], 'DevDiv') }}:
-          name: NetCore1ESPool-Internal
-          demands: ImageOverride -equals Build.Server.Amd64.VS2019
+          vmImage: windows-2022
     steps:
       - template: setup-maestro-vars.yml
         parameters:
