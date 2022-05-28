@@ -20,8 +20,6 @@ jobs:
     value: ${{ parameters.sourceIndexPackageSource }}
   - name: BinlogPath
     value: ${{ parameters.binlogPath }}
-  - ${{ if and(eq(parameters.runAsPublic, 'false'), ne(variables['System.TeamProject'], 'public'), notin(variables['Build.Reason'], 'PullRequest')) }}:
-    - group: source-dot-net stage1 variables
 
   ${{ if ne(parameters.pool, '') }}:
     pool: ${{ parameters.pool }}
