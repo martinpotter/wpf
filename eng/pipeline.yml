@@ -87,6 +87,7 @@ jobs:
           Build_Release_x64:
             _BuildConfig: Release
             _Platform: x64
+            _OfficialBuildIdArgs: /p:OfficialBuildId=$(BUILD.BUILDNUMBER)
       steps:
       - checkout: self
         clean: true

@@ -18,9 +18,8 @@
       those issues can be mitigated with a workaround described in https://github.com/dotnet/core/issues/7176.
       -->
     <AssemblyVersion>$(MajorVersion).$(MinorVersion).2.0</AssemblyVersion>
-    <PreReleaseVersionLabel>servicing</PreReleaseVersionLabel>
-    <PreReleaseVersionIteration>
-    </PreReleaseVersionIteration>
+    <PreReleaseVersionLabel>preview</PreReleaseVersionLabel>
+    <PreReleaseVersionIteration>1</PreReleaseVersionIteration>
     <SystemIOPackagingVersion>6.0.0</SystemIOPackagingVersion>
     <SystemResourcesExtensionsVersion>6.0.0</SystemResourcesExtensionsVersion>
   </PropertyGroup>
