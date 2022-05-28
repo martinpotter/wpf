@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>9a7e395b-e859-40e2-809d-efb72cf3a2ee</ProjectGuid>
+    <ProjectGuid>c847934a-828c-4ebb-a004-b0e97c8313f4</ProjectGuid>
     
     <Platforms>AnyCPU;x64;arm64</Platforms>
   </PropertyGroup>
@@ -8,6 +8,6 @@
   <PropertyGroup>
     <PackageName>$(MSBuildProjectName.Replace('.ArchNeutral',''))$(TransportPackageNameSuffix)</PackageName>
     <AssemblyName>$(PackageName)</AssemblyName>
-    <PackageDescription>WPF Transport Package from dotnet/wpf repository</PackageDescription>
+    <PackageDescription>Custom version of WPF built by Faithlife</PackageDescription>
   </PropertyGroup>
 </Project>

@@ -65,11 +65,11 @@
   <ItemGroup>
     <Link Include="Shlwapi.lib" />
   </ItemGroup>
-  <ItemGroup>
+  <!-- <ItemGroup>
     <EmbeddedResource Include="Resources\System.Printing.resx">
       <ManifestResourceName>System.Printing</ManifestResourceName>
     </EmbeddedResource>
-  </ItemGroup>
+  </ItemGroup> -->
   <ItemGroup>
     <CLCompile Include="CPP\Win32Inc.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

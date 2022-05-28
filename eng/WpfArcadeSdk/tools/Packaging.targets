@@ -13,7 +13,6 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageName Condition="'$(CreateArchNeutralPackage)'!='true' And '$(PackageName)'!=''">$(PackageRuntimeIdentifierPrefix).$(PackageName)</PackageName>
     <NormalizedPackageName>$(PackageName.Replace('$(PackageRuntimeIdentifierPrefix).',''))</NormalizedPackageName>
     <NuspecPackageId>$(PackageName)</NuspecPackageId>
     <DevelopmentDependency Condition="'$(MsBuildSdkPackage)'=='true'">true</DevelopmentDependency>
