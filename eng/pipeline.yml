@@ -112,6 +112,10 @@ jobs:
         #   (_HelixPipeline && _PublicBuildPipeline && _ContinuousIntegrationTestsEnabled && _BuildConfig == Release)
         condition: or(ne(variables['_HelixPipeline'], 'true'), and(eq(variables['_HelixPipeline'], 'true') ,eq(variables['_BuildConfig'], 'Release'), eq(variables['_PublicBuildPipeline'], 'true'), eq(variables['_ContinuousIntegrationTestsEnabled'], 'true')))
 
+      - publish: '$(Build.SourcesDirectory)\artifacts\packages\Release\NonShipping'
+        artifact: nupkg
+        displayName: Publish NuGet packages
+
       # Run DRTs
       - powershell: eng\common\cibuild.cmd
           -configuration $(_BuildConfig)
