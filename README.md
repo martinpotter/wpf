@@ -4,6 +4,8 @@
 
 This is a custom build of [Windows Presentation Foundation](https://github.com/dotnet/wpf) maintained by [Faithlife](https://faithlife.codes/).
 
+The `stable` branch is based off the `release/6.0` branch and is suitable to use with .NET 6.0 applications. The `master` branch tracks .NET 7.0 and is suitable for pre-release testing.
+
 ## Getting started
 
 ### Consuming
