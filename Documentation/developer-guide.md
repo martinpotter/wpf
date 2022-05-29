@@ -53,8 +53,11 @@ and not automated testing. For automated testing, see the [Running DRTs locally]
 
 *NOTE: You should build locally with the `-pack` param to ensure the binaries are put in the correct location for manual testing.*
 
+#### Referencing a pre-release NuGet package
+The simplest approach is to create a [local NuGet feed](https://docs.microsoft.com/en-us/nuget/hosting-packages/local-feeds), e.g., at `C:\Packages`. Make sure `C:\Packages` is in your NuGet sources. Publish your package to that feed with `nuget add artifacts\packages\Release\NonShipping\Faithlife.Wpf.xyz.nupug -Source C:\Packages`, then add `<PackageReference Include="Faithlife.Wpf" Version="xyz" />` to your project (where `xyz` is the full version number of the dev package you built).
+
 #### Copying binaries to publish location of a self-contained application
-The simplest approach is to publish your sample app using `dotnet publish -r <rid> --self-contained`.
+The next approach is to publish your sample app using `dotnet publish -r <rid> --self-contained`.
 You can add the `<SelfContained>true</SelfContained>` and `<RuntimeIdentifer>rid</RuntimeIdentifier>`
 properties to your .csproj or .vbproj file and then you can simply execute `dotnet publish`.
 We recommend always supplying a runtime identifier, as many of the WPF assemblies are architecture dependent.
