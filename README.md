@@ -3,8 +3,8 @@
 [![Build Status](https://dev.azure.com/Faithlife/WPF/_apis/build/status/Faithlife.wpf?branchName=stable)](https://dev.azure.com/Faithlife/WPF/_build/latest?definitionId=11&branchName=stable) [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/Faithlife/wpf/blob/stable/LICENSE.TXT)
 
 This is a custom build of [Windows Presentation Foundation](https://github.com/dotnet/wpf) maintained by [Faithlife](https://faithlife.codes/).
-
-The `stable` branch is based off the `release/6.0` branch and is suitable to use with .NET 6.0 applications. The `master` branch tracks .NET 7.0 and is suitable for pre-release testing.
+The `stable` branch (6.x) is based off the `release/6.0` branch and is suitable to use with .NET 6.0 applications. The `master` branch (7.x) tracks .NET 7.0 and is suitable for pre-release testing.
+The [Release Notes](ReleaseNotes.md) list the differences from the official release.
 
 ## Getting started
 
