@@ -17,9 +17,11 @@
     <IsShippingPackage>false</IsShippingPackage>
 
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <CopyrightMicrosoft Condition="'$(CopyrightNetFoundation)' != ''">$(CopyrightNetFoundation)</CopyrightMicrosoft>
     <Copyright Condition="'$(CopyrightNetFoundation)' != ''">$(CopyrightNetFoundation)</Copyright>
     <Authors>Faithlife, LLC</Authors>
     <PackageReleaseNotes>https://github.com/Faithlife/wpf/blob/stable/ReleaseNotes.md</PackageReleaseNotes>
+    <PackageIcon></PackageIcon>
 
     <PackageRequireLicenseAcceptance Condition="'$(PackageRequireLicenseAcceptance)'!=''">false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
