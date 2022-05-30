@@ -1,14 +1,8 @@
 # Contributing Guide
 
-The primary focus of .NET Core 3.0 release for WPF is to achieve parity with .NET Framework. Priority will be given to changes that align with that goal. See the [roadmap](../roadmap.md) to understand project goals.
-
-See the [acceptance criteria](acceptance_criteria.md) for types of issues that will be accepted before General Availability of .NET Core 3.0.
-
-Please [file an issue](https://github.com/dotnet/wpf/issues) for any larger change you would like to propose.
+See also the official upstream [WPF Contributing Guide](https://github.com/dotnet/wpf/blob/main/Documentation/contributing.md).
 
 See [Developer Guide](developer-guide.md) to learn how to develop changes for this repo.
-
-This project follows the general [.NET Core Contribution Guidelines](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/contributing.md). The contribution bar from the general contribution guidelines is copied below.
 
 ## Contribution "Bar"
 
