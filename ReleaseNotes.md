@@ -17,7 +17,6 @@
 * Remove some unnecessary StringBuilders: [#6275](https://github.com/dotnet/wpf/pull/6275).
 * Avoid boxing list enumerator in XamlObjectWriter.Logic_ConvertPositionalParamsToArgs:
 [#6279](https://github.com/dotnet/wpf/pull/6279).
-* Some improvements to FrugalList: [#6280](https://github.com/dotnet/wpf/pull/6280).
 * Avoid boxing list/array enumerator in CreateTextLSRuns: [#6281](https://github.com/dotnet/wpf/pull/6281).
 * Avoid enumerator boxing in XamlSchemaContext.UpdateNamespaceByUriList: [#6282](https://github.com/dotnet/wpf/pull/6282).
 * Change most non-generic sorts to be generic: [#6285](https://github.com/dotnet/wpf/pull/6285).
