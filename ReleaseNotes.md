@@ -2,6 +2,13 @@
 
 ## 6.1.0
 
+### Preview 2
+
+* Some improvements to FrugalList: [#6280](https://github.com/dotnet/wpf/pull/6280).
+* Eliminate allocation in `StreamAsIStream.Read` [#6632](https://github.com/dotnet/wpf/pull/6632).
+
+### Preview 1
+
 * Remove the custom HashSet class: [#3738](https://github.com/dotnet/wpf/pull/3738).
 * Small performance improvement of PathParser: [#4208](https://github.com/dotnet/wpf/pull/4208).
 * Use char overload in `string.Split`: [#4231](https://github.com/dotnet/wpf/pull/4231).
