@@ -34,7 +34,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <GitHubTransportPackageName>Faithlife.Wpf$(TransportPackageNameSuffix)</GitHubTransportPackageName>
+    <GitHubTransportPackageName>Microsoft.DotNet.Wpf.GitHub$(TransportPackageNameSuffix)</GitHubTransportPackageName>
     <DncEngTransportPackageName>Microsoft.DotNet.Wpf.DncEng$(TransportPackageNameSuffix)</DncEngTransportPackageName>
 
     <!-- When ready to go live, remove .private suffix -->
@@ -59,7 +59,7 @@
     <!-- Built out of https://www.github.com/dotnet/wpf -->
     <PackageName Condition="'$(RepoLocation)'=='WindowsDesktopSdk'">$(WindowsDesktopSdkPackageName)</PackageName>
 
-    <RepositoryUrl>https://github.com/Faithlife/wpf</RepositoryUrl>
+    <RepositoryUrl Condition="'$(RepoLocation)'=='Internal'">https://dev.azure.com/dnceng/internal/_git/dotnet-wpf-int</RepositoryUrl>
   </PropertyGroup>
 
 

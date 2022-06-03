@@ -52,7 +52,7 @@ function CopyNativeBinariesToLocation($location, $localBinLocation)
     # x86 - artifacts\packaging\Debug\Microsoft.DotNet.Wpf.GitHub\lib\win-x86
     # x64 - artifacts\packaging\Debug\x64\Microsoft.DotNet.Wpf.GitHub\lib\win-x64
 
-    $PackageName = "Faithlife.Wpf"
+    $PackageName = "Microsoft.DotNet.Wpf.GitHub"
     $BinaryLocationInPackage =  "win-$arch"
     CopyPackagedBinaries $location $localBinLocation $PackageName $BinaryLocationInPackage
 }
@@ -62,7 +62,7 @@ function CopyManagedBinariesToLocation($location, $localBinLocation)
     # x86 - artifacts\packaging\Debug\Microsoft.DotNet.Wpf.GitHub\lib\net6.0
     # x64 - artifacts\packaging\Debug\x64\Microsoft.DotNet.Wpf.GitHub\lib\net6.0
 
-    $PackageName = "Faithlife.Wpf"
+    $PackageName = "Microsoft.DotNet.Wpf.GitHub"
     $BinaryLocationInPackage = "net6.0"
     CopyPackagedBinaries $location $localBinLocation $PackageName $BinaryLocationInPackage
 }

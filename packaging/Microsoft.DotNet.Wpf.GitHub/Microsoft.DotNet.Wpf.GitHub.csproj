@@ -8,6 +8,6 @@
   <PropertyGroup>
     <PackageName>$(MSBuildProjectName.Replace('.ArchNeutral',''))$(TransportPackageNameSuffix)</PackageName>
     <AssemblyName>$(PackageName)</AssemblyName>
-    <PackageDescription>Custom version of WPF built by Faithlife</PackageDescription>
+    <PackageDescription>WPF Transport Package from dotnet/wpf repository</PackageDescription>
   </PropertyGroup>
 </Project>
