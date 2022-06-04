@@ -124,6 +124,17 @@ jobs:
         artifact: nupkg
         displayName: Publish NuGet artifacts
 
+      - task: NuGetAuthenticate@1
+        displayName: Authenticate with NuGet feeds
+
+      - task: NuGetCommand@2
+        inputs:
+          command: push
+          packagesToPush: $(Build.SourcesDirectory)\artifacts\packages\Release\Shipping\*.nupkg
+          nuGetFeedType: internal
+          publishVstsFeed: WPF/Public
+        displayName: Publish NuGet packages
+
       # Run DRTs
       - powershell: eng\common\cibuild.cmd
           -configuration $(_BuildConfig)
