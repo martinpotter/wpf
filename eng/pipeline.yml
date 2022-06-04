@@ -112,9 +112,17 @@ jobs:
         #   (_HelixPipeline && _PublicBuildPipeline && _ContinuousIntegrationTestsEnabled && _BuildConfig == Release)
         condition: or(ne(variables['_HelixPipeline'], 'true'), and(eq(variables['_HelixPipeline'], 'true') ,eq(variables['_BuildConfig'], 'Release'), eq(variables['_PublicBuildPipeline'], 'true'), eq(variables['_ContinuousIntegrationTestsEnabled'], 'true')))
 
-      - publish: '$(Build.SourcesDirectory)\artifacts\packages\Release\NonShipping'
+      - task: AzurePowerShell@5
+        displayName: Repackage Microsoft.WindowsDesktop.App
+        inputs:
+          ConnectedServiceNameARM: BuildAndRelease
+          scriptPath: eng\Repackage.ps1
+          TargetAzurePs: LatestVersion
+          pwsh: true
+
+      - publish: '$(Build.SourcesDirectory)\artifacts\packages\Release\Shipping'
         artifact: nupkg
-        displayName: Publish NuGet packages
+        displayName: Publish NuGet artifacts
 
       # Run DRTs
       - powershell: eng\common\cibuild.cmd
