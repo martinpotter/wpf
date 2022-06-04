@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.Xaml", "src\Microsof
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packaging", "packaging", "{0159B0F1-0626-4BED-8D1B-CBFF4F12C369}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Faithlife.Wpf", "Faithlife.Wpf", "{BF20132A-191F-4D34-9A1B-831772A6DFCF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microsoft.DotNet.Wpf.GitHub", "Microsoft.DotNet.Wpf.GitHub", "{BF20132A-191F-4D34-9A1B-831772A6DFCF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faithlife.Wpf", "packaging\Faithlife.Wpf\Faithlife.Wpf.csproj", "{C847934A-828C-4EBB-A004-B0E97C8313F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.DotNet.Wpf.GitHub", "packaging\Microsoft.DotNet.Wpf.GitHub\Microsoft.DotNet.Wpf.GitHub.csproj", "{C847934A-828C-4EBB-A004-B0E97C8313F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faithlife.Wpf.ArchNeutral", "packaging\Faithlife.Wpf\Faithlife.Wpf.ArchNeutral.csproj", "{9A7E395B-E859-40E2-809D-EFB72CF3A2EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.DotNet.Wpf.GitHub.ArchNeutral", "packaging\Microsoft.DotNet.Wpf.GitHub\Microsoft.DotNet.Wpf.GitHub.ArchNeutral.csproj", "{9A7E395B-E859-40E2-809D-EFB72CF3A2EE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microsoft.DotNet.Arcade.Wpf.Sdk", "Microsoft.DotNet.Arcade.Wpf.Sdk", "{8A2ABE39-2D50-48CA-AC32-078BBA32757A}"
 EndProject
