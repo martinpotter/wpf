@@ -1,13 +1,6 @@
 # Release Notes
 
-## 6.1.0
-
-### Preview 2
-
-* Some improvements to FrugalList: [#6280](https://github.com/dotnet/wpf/pull/6280).
-* Eliminate allocation in `StreamAsIStream.Read` [#6632](https://github.com/dotnet/wpf/pull/6632).
-
-### Preview 1
+## 6.0.6-faithlife.1.22304.12
 
 * Remove the custom HashSet class: [#3738](https://github.com/dotnet/wpf/pull/3738).
 * Small performance improvement of PathParser: [#4208](https://github.com/dotnet/wpf/pull/4208).
@@ -18,12 +11,13 @@
 * Eliminate memory copy when reading font data: [#6254](https://github.com/dotnet/wpf/pull/6254).
 * Avoid unnecessary enumerator allocations in XamlDirective.GetHashCode [#6265](https://github.com/dotnet/wpf/pull/6265).
 * Avoid exceptional string allocation in StaticExtension.ProvideValue: [#6269](https://github.com/dotnet/wpf/pull/6269).
-* Don't allocate fallback name in XamlNamespace.GetXamlType unless it's needed: [[#6270](https://github.com/dotnet/wpf/pull/6270).
+* Don't allocate fallback name in XamlNamespace.GetXamlType unless it's needed: [#6270](https://github.com/dotnet/wpf/pull/6270).
 * Remove substring allocation from Baml2006Reader.Logic_GetFullXmlns: [#6271](https://github.com/dotnet/wpf/pull/6271).
 * Use span slice instead of substring in AbbreviatedGeometryParser.ReadNumber: [#6272](https://github.com/dotnet/wpf/pull/6272).
 * Remove some unnecessary StringBuilders: [#6275](https://github.com/dotnet/wpf/pull/6275).
 * Avoid boxing list enumerator in XamlObjectWriter.Logic_ConvertPositionalParamsToArgs:
 [#6279](https://github.com/dotnet/wpf/pull/6279).
+* Some improvements to FrugalList: [#6280](https://github.com/dotnet/wpf/pull/6280).
 * Avoid boxing list/array enumerator in CreateTextLSRuns: [#6281](https://github.com/dotnet/wpf/pull/6281).
 * Avoid enumerator boxing in XamlSchemaContext.UpdateNamespaceByUriList: [#6282](https://github.com/dotnet/wpf/pull/6282).
 * Change most non-generic sorts to be generic: [#6285](https://github.com/dotnet/wpf/pull/6285).
