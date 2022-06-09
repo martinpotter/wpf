@@ -14,7 +14,6 @@
 * Don't allocate fallback name in XamlNamespace.GetXamlType unless it's needed: [#6270](https://github.com/dotnet/wpf/pull/6270).
 * Remove substring allocation from Baml2006Reader.Logic_GetFullXmlns: [#6271](https://github.com/dotnet/wpf/pull/6271).
 * Use span slice instead of substring in AbbreviatedGeometryParser.ReadNumber: [#6272](https://github.com/dotnet/wpf/pull/6272).
-* Remove some unnecessary StringBuilders: [#6275](https://github.com/dotnet/wpf/pull/6275).
 * Avoid boxing list enumerator in XamlObjectWriter.Logic_ConvertPositionalParamsToArgs:
 [#6279](https://github.com/dotnet/wpf/pull/6279).
 * Some improvements to FrugalList: [#6280](https://github.com/dotnet/wpf/pull/6280).
@@ -32,5 +31,6 @@
 * Avoid unnecessary List<> wrapper in GetTextRunSpans: [#6516](https://github.com/dotnet/wpf/pull/6516).
 * Avoid unnecessary Collection<T> wrapper in CombineSources: [#6517](https://github.com/dotnet/wpf/pull/6517).
 * Avoid allocating Stack<BranchNode> just to peek at it: [#6518](https://github.com/dotnet/wpf/pull/6518).
+* Eliminate allocation in `StreamAsIStream.Read` [#6632](https://github.com/dotnet/wpf/pull/6632).
 
 Thanks to contributors to this release: [@bgrainger](https://github.com/bgrainger), [@lindexi](https://github.com/lindexi), [@stephentoub](https://github.com/stephentoub), [@ThomasGoulet73](https://github.com/ThomasGoulet73).
