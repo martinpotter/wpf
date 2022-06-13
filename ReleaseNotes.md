@@ -1,5 +1,21 @@
 # Release Notes
 
+## 6.0.6-faithlife.2.22313.3
+
+* Use a stopwatch and timespan instead of DateTime and uint: [#1171](https://github.com/dotnet/wpf/pull/1171).
+* Remove redundant static fields to reduce memory usage in XamlTypeInvoker: [#4027](https://github.com/dotnet/wpf/pull/4027).
+* Remove unused local variable `node3Bounds` in `MS.Internal.Ink.StrokeNode.GetPointsAtMiddleSegment`: [#4256](https://github.com/dotnet/wpf/pull/4256).
+* Replace Dictionary ContainsKey-Add with TryAdd: [#4486](https://github.com/dotnet/wpf/pull/4486).
+* Remove unnecessary calculation in ImageSource.cs: [#5295](https://github.com/dotnet/wpf/pull/5295).
+* Merge pattern in DispatcherOperation: [#5296](https://github.com/dotnet/wpf/pull/5296).
+* Explicit delegate types: [#5954](https://github.com/dotnet/wpf/pull/5954).
+* Remove unused files: [#6130](https://github.com/dotnet/wpf/pull/6130).
+* Disable Indeterminate animation when hiding ProgressBar: [#6266](https://github.com/dotnet/wpf/pull/6266).
+* Avoid excessive calls to the PropertyValues index getter: [#6293](https://github.com/dotnet/wpf/pull/6293).
+* Account for optional out parameters in IStream: [#6345](https://github.com/dotnet/wpf/pull/6345).
+
+Thanks to contributors to this release: [@batzen](https://github.com/batzen), [@kant2002](https://github.com/kant2002), [@lindexi](https://github.com/lindexi), [@miloush](https://github.com/miloush), [@paulozemek](https://github.com/paulozemek), [@ThomasGoulet73](https://github.com/ThomasGoulet73).
+
 ## 6.0.6-faithlife.1.22304.12
 
 * Remove the custom HashSet class: [#3738](https://github.com/dotnet/wpf/pull/3738).
