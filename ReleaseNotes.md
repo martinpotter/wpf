@@ -1,5 +1,9 @@
 # Release Notes
 
+## 6.0.7-faithlife.1.22314.2
+
+* Incorporate changes from [.NET 6.0.6](https://github.com/dotnet/wpf/compare/v6.0.5...v6.0.6).
+
 ## 6.0.6-faithlife.2.22313.3
 
 * Use a stopwatch and timespan instead of DateTime and uint: [#1171](https://github.com/dotnet/wpf/pull/1171).
