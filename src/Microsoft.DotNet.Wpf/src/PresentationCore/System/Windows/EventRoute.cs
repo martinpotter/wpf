@@ -561,8 +561,8 @@ namespace System.Windows
 
         // Stores arguments that are passed to TraceRoutedEvent.Trace (to reduce allocations)
         private object[] _traceArguments;
-        private object _true = true;
-        private object _false = false;
+        private static readonly object _true = true;
+        private static readonly object _false = false;
 
         #endregion Data
     }
