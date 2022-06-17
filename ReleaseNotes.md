@@ -1,5 +1,10 @@
 # Release Notes
 
+## 6.0.7-faithlife.2.22317.5
+
+* Fix packaging to repackage Microsoft.WindowsDesktop.App.Runtime.win-x64 v6.0.6 with the DLLs from this project.
+* Reduce allocations when tracing routed events: [#6700](https://github.com/dotnet/wpf/pull/6700).
+
 ## 6.0.7-faithlife.1.22314.2
 
 * Incorporate changes from [.NET 6.0.6](https://github.com/dotnet/wpf/compare/v6.0.5...v6.0.6).
