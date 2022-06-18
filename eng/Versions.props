@@ -19,7 +19,7 @@
       -->
     <AssemblyVersion>$(MajorVersion).$(MinorVersion).2.0</AssemblyVersion>
     <PreReleaseVersionLabel>faithlife</PreReleaseVersionLabel>
-    <PreReleaseVersionIteration>2</PreReleaseVersionIteration>
+    <PreReleaseVersionIteration>3</PreReleaseVersionIteration>
     <SystemIOPackagingVersion>6.0.0</SystemIOPackagingVersion>
     <SystemResourcesExtensionsVersion>6.0.0</SystemResourcesExtensionsVersion>
   </PropertyGroup>
