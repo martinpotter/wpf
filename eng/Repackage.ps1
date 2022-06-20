@@ -32,7 +32,7 @@ $ns = @{
 $nuspecPath = Resolve-Path -Path "$packagingRoot\Microsoft.WindowsDesktop.App.Runtime.win-x64.nuspec"
 [xml]$nuspec = Get-Content $nuspecPath
 $nuspec.package.metadata.version = $lastBuiltLocalVersion
-$nuspec.package.metadata.authors = "Faithlife, LLC"
+$nuspec.package.metadata.authors = "Faithlife"
 $nuspec.package.metadata.icon
 $nuspec.package.metadata.license."#text" = "MIT"
 $nuspec.package.metadata.license.type = "expression"
