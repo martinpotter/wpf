@@ -32,8 +32,9 @@ trigger:
   batch: true 
   branches:
     include: 
-    - main
+    - master
     - stable
+    - test
   paths:
     exclude:
     - Documentation/*
@@ -42,7 +43,7 @@ pr:
   autoCancel: true
   branches:
     include:
-    - main
+    - master
     - stable
   paths:
     exclude:
