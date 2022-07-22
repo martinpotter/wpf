@@ -996,6 +996,7 @@ namespace System.Windows.Media
                     if (Channel != null)
                     {
                         // SyncFlush will Commit()
+
                         CommittingBatch?.Invoke(Channel, new EventArgs());
 
                         Channel.SyncFlush();

@@ -238,7 +238,7 @@
       <SourceRevisionId Condition="'$(SourceRevisionId)' == ''">unknownrev</SourceRevisionId>
     </PropertyGroup>
   </Target>
-  <Target Name="CreateManifestResourceNames"
+    <Target Name="CreateManifestResourceNames"
           Condition="'@(EmbeddedResource)' != ''"
           DependsOnTargets="$(CreateManifestResourceNamesDependsOn)"
           >
@@ -304,5 +304,4 @@
             <_OutOfDateEmbeddedResource Remove="@(_OutOfDateEmbeddedResource)" />
       </ItemGroup>
 </Target>
-
 </Project>
