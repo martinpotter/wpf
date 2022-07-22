@@ -1,5 +1,5 @@
 $baseNuGetPackage = 'Microsoft.WindowsDesktop.App.Runtime.win-x64'
-$baseNuGetVersion = '7.0.0-preview.4.22229.2'
+$baseNuGetVersion = '7.0.100-preview.6.22352.1'
 
 $lastBuiltLocalPackage = (Get-ChildItem .\artifacts\obj\Microsoft.DotNet.Wpf.GitHub\Release\*.nuspec | Sort-Object LastWriteTime | Select-Object -last 1).Name
 $lastBuiltLocalVersion = $lastBuiltLocalPackage.Replace('runtime.win-x64.Microsoft.DotNet.Wpf.GitHub.','').Replace('.nuspec','')
@@ -34,7 +34,7 @@ $ns = @{
 }
 
 $nuspec.package.metadata.version = $lastBuiltLocalVersion
-$nuspec.package.metadata.authors = "Faithlife, LLC"
+$nuspec.package.metadata.authors = "Faithlife"
 $nuspec.package.metadata.icon
 $nuspec.package.metadata.license."#text" = "MIT"
 $nuspec.package.metadata.license.type = "expression"

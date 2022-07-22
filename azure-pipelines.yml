@@ -34,6 +34,7 @@ trigger:
     include: 
     - master
     - stable
+    - test
   paths:
     exclude:
     - Documentation/*

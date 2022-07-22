@@ -1,5 +1,26 @@
 # Release Notes
 
+## 6.0.8-faithlife.1.22371.6
+
+* Incorporate changes from [.NET 6.0.7](https://github.com/dotnet/wpf/compare/v6.0.6...v6.0.7).
+* Fix TextBoxView memory leak for 2 seconds after unloading host control: [#1161](https://github.com/dotnet/wpf/pull/1161).
+* Inline VerifyAccess: [#4021](https://github.com/dotnet/wpf/pull/4021).
+* CommandParameter invalidates CanExecute: [#4217](https://github.com/dotnet/wpf/pull/4217).
+* Harden events against race conditions: [#5722](https://github.com/dotnet/wpf/pull/5722).
+* Fix ZeroForNow parameter: [#6657](https://github.com/dotnet/wpf/pull/6657).
+* Fix MissingManifestResourceException when printing.
+
+Thanks to contributors to this release: [@batzen](https://github.com/batzen), [Bruno Martinez](https://github.com/brunom), [@kant2002](https://github.com/kant2002), [@miloush](https://github.com/miloush), [@ThomasGoulet73](https://github.com/ThomasGoulet73).
+
+## 6.0.7-faithlife.2.22317.5
+
+* Fix packaging to repackage Microsoft.WindowsDesktop.App.Runtime.win-x64 v6.0.6 with the DLLs from this project.
+* Reduce allocations when tracing routed events: [#6700](https://github.com/dotnet/wpf/pull/6700).
+
+## 6.0.7-faithlife.1.22314.2
+
+* Incorporate changes from [.NET 6.0.6](https://github.com/dotnet/wpf/compare/v6.0.5...v6.0.6).
+
 ## 6.0.6-faithlife.2.22313.3
 
 * Use a stopwatch and timespan instead of DateTime and uint: [#1171](https://github.com/dotnet/wpf/pull/1171).
