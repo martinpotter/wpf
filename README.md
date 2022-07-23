@@ -25,7 +25,7 @@ In your CSPROJ file, update the Microsoft.WindowsDesktop.App reference:
 
 ```xml
 <ItemGroup>
-  <FrameworkReference Update="Microsoft.WindowsDesktop.App" RuntimeFrameworkVersion="6.0.6-faithlife.1.22304.12" />
+  <FrameworkReference Update="Microsoft.WindowsDesktop.App" RuntimeFrameworkVersion="6.0.8-faithlife.2.22373.4" />
 </ItemGroup>
 ```
 
