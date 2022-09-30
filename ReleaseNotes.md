@@ -1,5 +1,9 @@
 # Release Notes
 
+## 6.0.10-faithlife.1.22480.3
+
+* Incorporate changes from [.NET 6.0.9](https://github.com/dotnet/wpf/compare/v6.0.7...v6.0.9).
+
 ## 6.0.8-faithlife.2.22373.4
 
 * Fix `IOException` in `ZipArchiveEntry.OpenInUpdateMode` when printing: [#6842](https://github.com/dotnet/wpf/issues/6842).
