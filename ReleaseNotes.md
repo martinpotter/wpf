@@ -1,5 +1,10 @@
 # Release Notes
 
+## 6.0.14-faithlife.1.23062.2
+
+* Fix [CVE-2022-41089](https://github.com/advisories/GHSA-2c7v-qcjp-4mg2) in XAML parsing.
+* Incorporate changes from [.NET 6.0.13](https://github.com/dotnet/wpf/compare/v6.0.11...v6.0.13).
+
 ## 6.0.13-faithlife.1.22606.4
 
 * Fall back to `Window.Title` if `GetWindowText fails`: [#7345](https://github.com/dotnet/wpf/pull/7345).
