@@ -1,5 +1,12 @@
 # Release Notes
 
+## 6.0.14-faithlife.2.23102.2
+
+* Revert the fix for [CVE-2022-41089](https://github.com/advisories/GHSA-2c7v-qcjp-4mg2).
+  * This can break XPS usage in many scenarios: [#7357](https://github.com/dotnet/wpf/issues/7357).
+  * If your application opens untrusted XPS files, do not update to this version but keep using v6.0.14-faithlife.1.23062.2.
+  * If your application does not open untrusted XPS files, but just uses XPS internally, this version restores previous XPS functionality.
+
 ## 6.0.14-faithlife.1.23062.2
 
 * Fix [CVE-2022-41089](https://github.com/advisories/GHSA-2c7v-qcjp-4mg2) in XAML parsing.
