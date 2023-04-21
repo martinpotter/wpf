@@ -49,6 +49,7 @@ parameters:
     type: object
     default:
       enable: false
+      publishGdn: false
       continueOnError: false
       params: ''
       artifactNames: ''
@@ -94,6 +95,7 @@ stages:
     displayName: Validate Build Assets
     variables:
       - template: common-variables.yml
+      - template: /eng/common/templates/variables/pool-providers.yml
     jobs:
     - job:
       displayName: NuGet Validation
@@ -232,6 +234,7 @@ stages:
     - template: /eng/common/templates/job/execute-sdl.yml
       parameters:
         enable: ${{ parameters.SDLValidationParameters.enable }}
+        publishGuardianDirectoryToPipeline: ${{ parameters.SDLValidationParameters.publishGdn }}
         additionalParameters: ${{ parameters.SDLValidationParameters.params }}
         continueOnError: ${{ parameters.SDLValidationParameters.continueOnError }}
         artifactNames: ${{ parameters.SDLValidationParameters.artifactNames }}
@@ -246,6 +249,7 @@ stages:
     displayName: Publish using Darc
     variables:
       - template: common-variables.yml
+      - template: /eng/common/templates/variables/pool-providers.yml
     jobs:
     - job:
       displayName: Publish Using Darc

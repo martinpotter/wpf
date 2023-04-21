@@ -1053,7 +1053,7 @@ namespace System.Windows.Media.Imaging
                 if (uri.IsAbsoluteUri)
                 {
                     // This code path executes only for pack web requests
-                    if (String.Compare(uri.Scheme, PackUriHelper.UriSchemePack, StringComparison.OrdinalIgnoreCase) == 0)
+                    if (string.Equals(uri.Scheme, PackUriHelper.UriSchemePack, StringComparison.OrdinalIgnoreCase))
                     {
                         WebResponse response = WpfWebRequestHelper.CreateRequestAndGetResponse(uri);
                         bitmapStream = response.GetResponseStream();
@@ -1146,7 +1146,7 @@ namespace System.Windows.Media.Imaging
                     }
                     else
                     {
-                        // If Filestream is async that doesn't support IWICImagingFactory_CreateDecoderFromFileHandle_Proxy, then revert to old code path.
+                        // The IWICImagingFactory_CreateDecoderFromFileHandle_Proxy do not support async Filestream, so we revert to old code path.
                         safeFilehandle = null;
                     }
                 }

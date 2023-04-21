@@ -15,8 +15,8 @@ jobs:
     enableMicrobuild: false
     enablePublishBuildArtifacts: true
     enablePublishTestResults: false # tests run in helix
-    enablePublishBuildAssets: false
-    enablePublishUsingPipelines: $(_PublishUsingPipelines)
+    enablePublishBuildAssets: true
+    enablePublishUsingPipelines: true
     enableTelemetry: true
     enableSourceIndex: true
     sourceIndexParams:
@@ -24,11 +24,11 @@ jobs:
       binlogPath: artifacts/log/Debug/x86/Build.binlog
       pool:
         ${{ if eq(variables['System.TeamProject'], 'public') }}:
-          name: NetCore1ESPool-Public
-          demands: ImageOverride -equals Build.Windows.Amd64.VS2022.Pre.Open
+          name: NetCore-Svc-Public
+          demands: ImageOverride -equals windows.vs2022preview.amd64.Open
         ${{ if eq(variables['System.TeamProject'], 'internal') }}:
-          name: NetCore1ESPool-Internal
-          demands: ImageOverride -equals Build.Windows.Amd64.VS2022.Pre
+          name: NetCore1ESPool-Svc-Internal
+          demands: ImageOverride -equals windows.vs2022preview.amd64
     helixRepo: $(repoName)
 
     jobs:
@@ -78,8 +78,7 @@ jobs:
           - name: _SignArgs
             value: /p:DotNetSignType=$(_SignType) /p:TeamName=$(_TeamName)
           - name: _PublishArgs
-            value: 
-              /p:DotNetPublishUsingPipelines=$(_PublishUsingPipelines)
+            value: /p:DotNetPublishUsingPipelines=true
           - name: _OfficialBuildIdArgs
             value: /p:OfficialBuildId=$(BUILD.BUILDNUMBER)
           - name: _PublicBuildPipeline
@@ -169,4 +168,3 @@ jobs:
         #   (_HelixPipeline && _PublicBuildPipeline && _ContinuousIntegrationTestsEnabled && _BuildConfig == Release)
         #
         condition: and(succeeded(), eq(variables['_HelixPipeline'], 'true') ,eq(variables['_BuildConfig'], 'Release'), eq(variables['_PublicBuildPipeline'], 'true'), eq(variables['_ContinuousIntegrationTestsEnabled'], 'true'))
-
