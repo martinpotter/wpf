@@ -102,6 +102,15 @@ jobs:
       - checkout: self
         clean: true
 
+      # Download a required MSVC input library to the folders for the two projects that need it; setting LIBPATH did not seem to work
+      - task: PowerShell@2
+        displayName: Install msvcurt_netcore.lib
+        inputs:
+          targetType: inline
+          script: |
+            Invoke-WebRequest -Uri 'https://downloads.logoscdn.com/VC/14.35.32215/msvcurt_netcore.lib' -OutFile "$(Build.SourcesDirectory)\src\Microsoft.DotNet.Wpf\src\DirectWriteForwarder\msvcurt_netcore.lib"
+            Copy-Item "$(Build.SourcesDirectory)\src\Microsoft.DotNet.Wpf\src\DirectWriteForwarder\msvcurt_netcore.lib" "$(Build.SourcesDirectory)\src\Microsoft.DotNet.Wpf\src\System.Printing\msvcurt_netcore.lib"
+
       # Set VSO Variable(s)
       - powershell: eng\pre-build.ps1
         displayName: Pre-Build - Set VSO Variables

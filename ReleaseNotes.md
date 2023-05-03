@@ -1,5 +1,30 @@
 # Release Notes
 
+## 6.0.14-faithlife.2.23102.2
+
+* Revert the fix for [CVE-2022-41089](https://github.com/advisories/GHSA-2c7v-qcjp-4mg2).
+  * This can break XPS usage in many scenarios: [#7357](https://github.com/dotnet/wpf/issues/7357).
+  * If your application opens untrusted XPS files, do not update to this version but keep using v6.0.14-faithlife.1.23062.2.
+  * If your application does not open untrusted XPS files, but just uses XPS internally, this version restores previous XPS functionality.
+
+## 6.0.14-faithlife.1.23062.2
+
+* Fix [CVE-2022-41089](https://github.com/advisories/GHSA-2c7v-qcjp-4mg2) in XAML parsing.
+* Incorporate changes from [.NET 6.0.13](https://github.com/dotnet/wpf/compare/v6.0.11...v6.0.13).
+
+## 6.0.13-faithlife.1.22606.4
+
+* Fall back to `Window.Title` if `GetWindowText fails`: [#7345](https://github.com/dotnet/wpf/pull/7345).
+* Incorporate changes from [.NET 6.0.11](https://github.com/dotnet/wpf/compare/v6.0.9...v6.0.11).
+
+## 6.0.10-faithlife.1.22480.3
+
+* Incorporate changes from [.NET 6.0.9](https://github.com/dotnet/wpf/compare/v6.0.7...v6.0.9).
+
+## 6.0.8-faithlife.2.22373.4
+
+* Fix `IOException` in `ZipArchiveEntry.OpenInUpdateMode` when printing: [#6842](https://github.com/dotnet/wpf/issues/6842).
+
 ## 6.0.8-faithlife.1.22371.6
 
 * Incorporate changes from [.NET 6.0.7](https://github.com/dotnet/wpf/compare/v6.0.6...v6.0.7).

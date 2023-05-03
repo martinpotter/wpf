@@ -2975,7 +2975,34 @@ IsXpsOMPrintingDisabled(
 void
 )
 {
-    return false;
+    bool isXpsOMPrintingDisabled = false;
+
+    try
+    {
+        InternalExceptionResourceManager^ manager = gcnew InternalExceptionResourceManager();
+        System::Globalization::CultureInfo^ culture = System::Threading::Thread::CurrentThread->CurrentUICulture;
+        String^ regKeyBasePath = manager->GetString("RegKeyBasePath", culture);
+        String^ useXPSOMPrintingRegValue = manager->GetString("PrintSystemJobInfo_disableXPSOMPrinting_RegValue", culture);
+
+        DWORD result = 0;
+        Object^ objValue = Microsoft::Win32::Registry::GetValue(regKeyBasePath, useXPSOMPrintingRegValue, result);
+        if (objValue != nullptr && dynamic_cast<Int32^>(objValue))
+        {
+            DWORD result = safe_cast<Int32>(objValue);
+            if (result != 0)
+            {
+                isXpsOMPrintingDisabled = true;
+            }
+        }
+
+        XpsOMPrintingTraceLogger::LogXpsOMStatus(!isXpsOMPrintingDisabled);
+    }
+    // Registry Key may be in the middle of deletion
+    catch (IOException^)
+    {
+    }
+
+    return isXpsOMPrintingDisabled;
 }
 
 Boolean
