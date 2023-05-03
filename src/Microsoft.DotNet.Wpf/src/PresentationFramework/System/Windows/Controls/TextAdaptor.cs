@@ -103,17 +103,21 @@ namespace MS.Internal.Automation
             {
                 if (!textView.Contains(start) && start.CompareTo(textSegments[0].Start) < 0)
                 {
-                    start = textSegments[0].Start.CreatePointer(); ;
+                    start = textSegments[0].Start;
                 }
                 if (!textView.Contains(end) && end.CompareTo(textSegments[textSegments.Count-1].End) > 0)
                 {
-                    end = textSegments[textSegments.Count - 1].End.CreatePointer();
+                    end = textSegments[textSegments.Count - 1].End;
                 }
             }
             if (!textView.Contains(start) || !textView.Contains(end))
             {
                 return Array.Empty<Rect>();
             }
+
+            // Create a copy since TextRangeAdaptor.MoveToInsertionPosition can modify the TextPointer
+            start = start.CreatePointer();
+            end = end.CreatePointer();
 
             TextRangeAdaptor.MoveToInsertionPosition(start, LogicalDirection.Forward);
             TextRangeAdaptor.MoveToInsertionPosition(end, LogicalDirection.Backward);
