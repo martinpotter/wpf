@@ -15,10 +15,10 @@ jobs:
     enableMicrobuild: false
     enablePublishBuildArtifacts: true
     enablePublishTestResults: false # tests run in helix
-    enablePublishBuildAssets: true
-    enablePublishUsingPipelines: true
-    enableTelemetry: true
-    enableSourceIndex: true
+    enablePublishBuildAssets: false
+    enablePublishUsingPipelines: false
+    enableTelemetry: false
+    enableSourceIndex: false
     sourceIndexParams:
       condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
       binlogPath: artifacts/log/Debug/x86/Build.binlog
