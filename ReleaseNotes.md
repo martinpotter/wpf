@@ -1,5 +1,9 @@
 # Release Notes
 
+## 7.0.6-faithlife.1.23255.3
+
+* Incorporate changes from [.NET 7.0.5](https://github.com/dotnet/wpf/compare/v6.0.16...v7.0.5).
+
 ## 6.0.18-faithlife.1.23253.14
 
 * Always create a copy of the TextPointers in `TextAdaptor.GetBoundingRectangles`: [#2](https://github.com/Faithlife/wpf/pull/2).

@@ -26,14 +26,14 @@ In your CSPROJ file, update the Microsoft.WindowsDesktop.App reference:
 
 ```xml
 <ItemGroup>
-  <FrameworkReference Update="Microsoft.WindowsDesktop.App" RuntimeFrameworkVersion="6.0.8-faithlife.2.22373.4" />
+  <FrameworkReference Update="Microsoft.WindowsDesktop.App" RuntimeFrameworkVersion="7.0.6-faithlife.1.23255.3" />
 </ItemGroup>
 ```
 
 ### Building
 
 * To build a dev package: `build.cmd -c Release -platform x64 -test -pack`
-  * To use a unique version number, add `/p:OfficialBuildId=YYYYMMDD.BUILD`, e.g., `/p:OfficialBuildId=20220324.5`.
+  * To use a unique version number, add `/p:OfficialBuildId=YYYYMMDD.BUILD`, e.g., `/p:OfficialBuildId=20230505.3`.
 * All commits pushed to the `stable` branch will build a CI package that will be pushed to the Azure Artifacts feed.
 * [Contributing guide](Documentation/contributing.md)
 
@@ -50,7 +50,7 @@ In your CSPROJ file, update the Microsoft.WindowsDesktop.App reference:
   1. Ensure you're running [Powershell 7.3.1](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3) or later.
   2. In your root wpf folder run .\eng\Repackage.ps1
   3. Move the file located in `.\artifacts\packages\Release\Shipping\` To the location you store local testing nuget packages.
-  4. Update the version in your project to match the built version `6.0.14-dev.23063.1`
+  4. Update the version in your project to match the built version `7.0.6-dev.23255.3`
 
 ## Issues
 
