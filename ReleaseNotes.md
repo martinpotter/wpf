@@ -1,5 +1,9 @@
 # Release Notes
 
+## 7.0.12-faithlife.1.23502.3
+
+* Incorporate changes from [.NET 7.0.11](https://github.com/dotnet/wpf/compare/v7.0.5...v7.0.11).
+
 ## 7.0.6-faithlife.1.23255.3
 
 * Incorporate changes from [.NET 7.0.5](https://github.com/dotnet/wpf/compare/v6.0.16...v7.0.5).
