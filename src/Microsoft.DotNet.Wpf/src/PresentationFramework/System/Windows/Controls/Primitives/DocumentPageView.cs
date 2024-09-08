@@ -81,6 +81,7 @@ namespace System.Windows.Controls.Primitives
                     {
                         _documentPaginator.GetPageCompleted -= new GetPageCompletedEventHandler(HandleGetPageCompleted);
                         _documentPaginator.PagesChanged -= new PagesChangedEventHandler(HandlePagesChanged);
+                        _documentPaginator.CancelAsync(this);
                         DisposeCurrentPage();
                         DisposeAsyncPage();
                     }
